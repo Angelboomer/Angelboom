@@ -1,0 +1,76 @@
+body{
+    background-color:pink;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+}
+
+.navbar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #47007775;
+    z-index: 1000;
+    width: 100%;
+    display: table; 
+    table-layout: fixed;
+    padding: 10px 0;
+
+/*rgb(255,192,203)--!*/
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    display: table-cell; /* Make each link act as a table cell! */
+    text-align: center;
+    padding: 15px 25px; 
+    font-size: 1.2em;
+    font-weight: bold;
+    border-right: 2px solid white; /* Border between each link */
+}
+
+.navbar a:hover{
+    background-color: rgba(255, 179, 245, 0.411);
+    color: rgb(255, 255, 255);
+}
+/* below I have my"gif"*/
+h1 {
+    margin-bottom: 70px;
+    font-size: 2em;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:hover{
+    background-color: rgba(255, 0, 149, 0.856);
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    margin-top:60px;
+    font-size: 2em;
+}
+
