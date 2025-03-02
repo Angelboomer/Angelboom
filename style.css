@@ -1,7 +1,7 @@
 body{
     background-color:pink;
     text-align: center;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif; //* I decided to go with New Times Roman as I'm not too familiar with Google Fonts just yet.*//
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -29,19 +29,19 @@ body{
 .navbar a {
     color: white;
     text-decoration: none;
-    display: table-cell; /* Make each link act as a table cell! */
+    display: table-cell; /* Make each link act as a table cell! This is correlating to my navigation bar*/
     text-align: center;
     padding: 15px 25px; 
     font-size: 1.2em;
     font-weight: bold;
-    border-right: 2px solid white; /* Border between each link */
+    border-right: 2px solid white; /* Border between each link so that they don't overlap as one big block.*/
 }
 
 .navbar a:hover{
     background-color: rgba(255, 179, 245, 0.411);
     color: rgb(255, 255, 255);
 }
-/* below I have my"gif"*/
+
 h1 {
     margin-bottom: 70px;
     font-size: 2em;
