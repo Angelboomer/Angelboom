@@ -1,7 +1,7 @@
 body{
     background-color:pink;
     text-align: center;
-    font-family:'Times New Roman', Times, serif; //* I decided to go with New Times Roman as I'm not too familiar with Google Fonts just yet.*//
+    font-family:'Times New Roman', Times, serif; /* I decided to go with New Times Roman as I'm not too familiar with Google Fonts just yet.*/
     margin: 0;
     padding: 0;
     min-height: 100vh;
