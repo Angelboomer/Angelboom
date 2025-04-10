@@ -74,3 +74,23 @@ h1 {
     font-size: 2em;
 }
 
+.quiz-container {
+    background-color: #f58daf;  /* White background */
+    border-radius: 10px;         /* Rounded corners */
+    padding: 20px;               /* Padding around the content */
+    margin: 20px auto;           /* Centered container with margin */
+    width: 80%;                  /* Makes the container take up 80% of the width */
+    max-width: 600px;            /* Ensures the container doesn't stretch too wide */
+    box-shadow: 0px 4px 10px rgb(184, 36, 36); /* Light shadow for depth */
+}
+.quiz-container h1 {
+    font-size: 2em; /* Font size for the quiz heading */
+    color: #470077;  /* Matching color with the navbar */
+    margin-bottom: 20px; /* Margin below the heading */
+}
+
+.quiz-container p {
+    font-size: 1.2em;  
+    color: #333; 
+    margin-bottom: 20px; 
+}

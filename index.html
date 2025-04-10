@@ -22,7 +22,99 @@
 <img src="angel-bow.gif" alt="angel-bow.gif" style="width: auto; height: auto;">
 </div>    
     <p> Welcome to AngelBoom, where all of my progress within coding <br> can be accessed by profressors and peers alike. Thank you <br> for visiting my website, and I hope to see you again soon. </p>
-<div style="text-align:center;">
+    <div style="text-align:center;">
+        <h1>Self-Assessment Quiz</h1>
+        <p>Test your knowledge of the topics covered on this site!</p>
+        
+        <!-- Quiz Container -->
+        <div class="quiz-container">
+            <form id="quizForm">
+                <!-- Question 1 -->
+                <div class="question">
+                    <p>1. What is the main purpose of cookies in web design?</p>
+                    <label><input type="radio" name="q1" value="a"> To slow down the website</label><br>
+                    <label><input type="radio" name="q1" value="b"> To personalize user experience</label><br>
+                    <label><input type="radio" name="q1" value="c"> To delete browsing data</label><br>
+                </div>
+            
+                <!-- Question 2 -->
+                <div class="question">
+                    <p>2. In the context of UI design, what does "Fun over Function" promote?</p>
+                    <label><input type="radio" name="q2" value="a"> UI should only be entertaining</label><br>
+                    <label><input type="radio" name="q2" value="b"> UI should prioritize emotional connection while remaining clear</label><br>
+                    <label><input type="radio" name="q2" value="c"> Functionality is irrelevant in design</label><br>
+                </div>
+            
+                <!-- Question 3 -->
+                <div class="question">
+                    <p>3. Which type of cookie helps with targeted advertising?</p>
+                    <label><input type="radio" name="q3" value="a"> Essential Cookies</label><br>
+                    <label><input type="radio" name="q3" value="b"> Functional Cookies</label><br>
+                    <label><input type="radio" name="q3" value="c"> Advertising Cookies</label><br>
+                </div>
+            
+                <!-- Question 4 - Fill in the blank -->
+                <div class="question">
+                    <p>4. Fill in the blank: HTML was first created in ____.</p>
+                    <input type="text" name="q4">
+                </div>
+            
+                <!-- Question 5 - Multiple correct answers -->
+                <div class="question">
+                    <p>5. Which of the following are types of cookies? (Select all that apply)</p>
+                    <label><input type="checkbox" name="q5" value="a"> Essential</label><br>
+                    <label><input type="checkbox" name="q5" value="b"> Useless</label><br>
+                    <label><input type="checkbox" name="q5" value="c"> Performance</label><br>
+                    <label><input type="checkbox" name="q5" value="d"> Advertising</label><br>
+                </div>
+            
+                <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+                <button type="button" onclick="resetQuiz()">Restart Quiz</button>
+            </form>
+        
+            <div id="results" class="result"></div>
+        </div> <!-- End quiz-container -->
+    </div>
+  
+    <script>
+        function gradeQuiz() {
+            let score = 0;
+            let results = "<h2>Quiz Results</h2>";
+
+            let q1 = document.querySelector('input[name="q1"]:checked');
+            if (q1 && q1.value === "b") score++;
+            results += `<p>1. ${q1 ? q1.value === "b" ? 'Correct' : 'Incorrect' : 'Not Answered'} (Answer: b)</p>`;
+
+            let q2 = document.querySelector('input[name="q2"]:checked');
+            if (q2 && q2.value === "b") score++;
+            results += `<p>2. ${q2 ? q2.value === "b" ? 'Correct' : 'Incorrect' : 'Not Answered'} (Answer: b)</p>`;
+
+            let q3 = document.querySelector('input[name="q3"]:checked');
+            if (q3 && q3.value === "c") score++;
+            results += `<p>3. ${q3 ? q3.value === "c" ? 'Correct' : 'Incorrect' : 'Not Answered'} (Answer: c)</p>`;
+
+            let q4 = document.querySelector('input[name="q4"]').value.trim();
+            if (q4 === "1991") score++;
+            results += `<p>4. ${q4 === "1991" ? 'Correct' : 'Incorrect'} (Answer: 1991)</p>`;
+
+            let q5 = document.querySelectorAll('input[name="q5"]:checked');
+            let values = Array.from(q5).map(cb => cb.value);
+            let correctSet = ["a", "c", "d"];
+            if (values.length === 3 && correctSet.every(val => values.includes(val))) score++;
+            results += `<p>5. ${values.length === 3 && correctSet.every(val => values.includes(val)) ? 'Correct' : 'Incorrect'} (Answers: a, c, d)</p>`;
+
+            results += `<h3>Total Score: ${score}/5</h3>`;
+            results += `<h3>${score >= 3 ? 'Result: Pass ✅' : 'Result: Fail ❌'}</h3>`;
+
+            document.getElementById("results").innerHTML = results;
+        }
+
+        function resetQuiz() {
+            document.getElementById("quizForm").reset();
+            document.getElementById("results").innerHTML = "";
+        }
+    </script>
+
 <img src="stars.png" alt="Falling Angels" style="width: 500px; height: auto;">
 </div>
 </body>
