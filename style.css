@@ -94,3 +94,85 @@ h1 {
     color: #333; 
     margin-bottom: 20px; 
 }
+
+form, .question, .result {
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+}
+
+input[type="submit"], button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #e0569d;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 12px;
+        border: none;
+        font-size: 1em;
+        border-bottom: 1px solid white;
+    }
+
+    .quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    form, .question, .result {
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* Small phones */
+@media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+    .navbar a {
+      display: block;
+      font-size: 1em;
+    }
+    .quiz-container {
+      width: 95%;
+      padding: 15px;
+    }
+    form, .question, .result {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
+  /* Tablets and small desktops */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .navbar a {
+      font-size: 1.1em;
+      padding: 12px;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 1025px) {
+    .navbar a {
+      font-size: 1.3em;
+    }
+  }
+  
+}
+
+
